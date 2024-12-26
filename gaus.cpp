@@ -1,20 +1,20 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "header.h"
 
 using namespace std;
 
 void Gaus::init_method() {
 	int n;
-	cout << "Ââåäèòå êîë-âî óðàâíåíèé: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ð¹: ";
 	cin >> n;
 	double a[10][10], x[10];
-	matrix(a, n);elemfart(a, x, n); back(x, n);
+	matrix(a, n); elemfart(a, x, n); back(x, n);
 
 
 }
 
 void Gaus::matrix(double a[][10], int n) {
-	cout << "Ââåäèòå êîýô: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾ÑÑ„Ñ„Ð¸Ñ†ÐµÐ½Ñ‚Ñ‹ : ";
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			cin >> a[i][j];
@@ -32,7 +32,7 @@ void Gaus::elemfart(double a[][10], double x[], int n) {
 			}
 		}
 	}
-	for (int i = n - 1;i >= 0;i--) {
+	for (int i = n - 1; i >= 0; i--) {
 		x[i] = a[i][n];
 		for (int j = i + 1; j < n; j++) {
 			x[i] = x[i] - a[i][j] * x[j];
@@ -42,10 +42,9 @@ void Gaus::elemfart(double a[][10], double x[], int n) {
 }
 
 void Gaus::back(double x[], int n) {
-	cout << "Ðåøåíèå: ";
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ";
 	for (int i = 0; i < n; i++) {
 		cout << "x" << i + 1 << "=" << x[i] << endl;
 	}
 }
-
 

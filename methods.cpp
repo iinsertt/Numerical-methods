@@ -11,6 +11,18 @@ int main()
     Kramer kramer;
     kramer.init_method();
 
-    Lagrange lagrange; 
+    Lagrange lagrange;
     lagrange.init_method();
+
+    Spline spline;
+    spline.init_method();
+
+    Integration integration;
+    integration.init_method();
+
+    Kyrt kyrt;
+    kyrt.init_method();
+
+    Eler eler;
+    eler.init_method();
 }

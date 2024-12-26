@@ -1,14 +1,14 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "header.h"
 using namespace std;
 
 void Kramer::init_method() {
 	int n;
-	cout << "Ââåäèòå êîë-âî óðàâíåíèé: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ð¹: ";
 	cin >> n;
 
 	double a[10][10], b[10], x[10];
-	cout << "Ââåäèòå êîýôôèöèåíòû ìàòðèö À è ñâîáîäíûå ÷ëåíû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾ÑÑ„Ñ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð Ð¸ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ðµ Ñ‡Ð»ÐµÐ½Ñ‹: ";
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			cin >> a[i][j];
@@ -17,7 +17,7 @@ void Kramer::init_method() {
 	}
 	double detA = metodKramera(a, n);
 	if (detA == 0) {
-		cout << "Ñèñòåìà íå èìååò åäèíîãî ðåøåíèÿ." << endl;
+		cout << "Ð¡Ð¸ÑÑ‚ÐµÐ¼Ð° Ð½Ðµ Ð¸Ð¼ÐµÐµÑ‚ ÐµÐ´Ð¸Ð½Ð¾Ð³Ð¾ Ñ€ÐµÑˆÐµÐ½Ð¸Ñ." << endl;
 		return;
 	}
 
@@ -32,7 +32,7 @@ void Kramer::init_method() {
 		double detTemp = metodKramera(temp, n);
 		x[i] = detTemp / detA;
 	}
-	cout << "Ðåøåíèå: " << endl;
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " << endl;
 	for (int i = 0; i < n; i++) {
 		cout << "x" << i + 1 << "=" << x[i] << endl;
 	}
