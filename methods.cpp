@@ -25,4 +25,10 @@ int main()
 
     Eler eler;
     eler.init_method();
+
+    Hw1 hw1;
+    hw1.init_method();
+
+    Hw2 hw2;
+    hw2.init_method();
 }
